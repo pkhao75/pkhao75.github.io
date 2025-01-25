@@ -1,7 +1,7 @@
 ---
 title: "Main"
 layout: default
-permalink: /main/
+permalink: /
 ---
 
 # Pubordee Khaopaisarn
