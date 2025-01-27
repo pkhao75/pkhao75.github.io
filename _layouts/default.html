@@ -6,6 +6,7 @@
 
 {% seo %}
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
     <!--[if lt IE 9]>
@@ -19,7 +20,8 @@
   </head>
   <body>
       <div id="header">
-        <nav>
+        <h1>{{ site.title | default: site.github.repository_name }}</h1>
+        <!-- <nav>
           <ul>
             <li class="fork"><a href="{{ site.github.repository_url }}">View On GitHub</a></li>
             {% if site.show_downloads %}
@@ -28,30 +30,55 @@
               <li class="title">DOWNLOADS</li>
             {% endif %}
           </ul>
-        </nav>
+        </nav> -->
       </div><!-- end header -->
 
     <div class="wrapper">
 
       <section>
+        {{ content }}
         <div id="title">
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
           <p>{{ site.description | default: site.github.project_tagline }}</p>
+        </div>
+        <section id="projects" class="projects-section">
+          <div class="project-block">
+            <h2>Audio Visualizer</h2>
+            <h3>C++, OpenGL, SDL2</h3>
+            <a href="/AudioVisualizer.html" style="display: block; text-align: center; margin: 0 auto;">View Details </a>
+            <img src="projects/AudioVisualizer/preview.gif" alt="Project Image" style="display: block; margin: 0 auto; width: 480px;">
+          </div>
+
+          <div class="project-block">
+            <h2>Movie List Manager</h2>
+            <h3>Java, Swing</h3>
+            <a href="/MovieListManager.html" style="display: block; text-align: center; margin: 0 auto;">View Details </a>
+            <img src="projects/MovieListManager/preview.gif" alt="Project Image" style="display: block; margin: 0 auto; width: 480px;">
+          </div>
+
+          <div class="project-block">
+            <h2>Sliding Puzzle Game</h2>
+            <h3>Python, Turtle</h3>
+            <a href="/PuzzleSlider.html" style="display: block; text-align: center; margin: 0 auto;">View Details </a>
+            <img src="projects/SlidingPuzzle/preview.gif" alt="Project Image" style="display: block; margin: 0 auto; width: 480px;">
+          </div>
+
+          <div class="project-block">
+            <h2>Five-Card Draw Game</h2>
+            <h3>Python</h3>
+            <a href="/DrawFive.html" style="display: block; text-align: center; margin: 0 auto;">View Details </a>
+            <img src="projects/DrawFive/preview.gif" alt="Project Image" style="display: block; margin: 0 auto; width: 480px;">
+          </div>
+        </section>
+
+
+      </section>
+
+      <section>
+        <div id="title">
           <hr>
           <span class="credits left">Project maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></span>
           <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/mattgraham">mattgraham</a></span>
         </div>
-
-        {{ content }}
-
-      </section>
-      <section id="projects" class="projects-section">
-          <div class="project-block">
-              <img src="path/to/image.jpg" alt="Project Image">
-              <h3>Project Name</h3>
-              <a href="/project-page.html">View Details</a>
-          </div>
-          <!-- Add more blocks as needed -->
       </section>
 
     </div>

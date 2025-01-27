@@ -6,7 +6,12 @@ exclude:
   - node_modules
   - README.md
 
+include:
+  - assets/css/custom.css
+
 collections:
   posts:
     output: true
     permalink: /post/:path/
+
+title: "Pubordee Khaopaisarn"
